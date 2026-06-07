@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Announcements</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <h2>Church Admin</h2>
+
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="members.html">Members</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="sermons.html">Sermons</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="announcements.html">Announcements</a></li>
+            <li onclick="logout()">Logout</li>
+        </ul>
+    </div>
+
+    <div class="main">
+
+        <h1>Church Announcements</h1>
+
+        <input type="text" id="announcementTitle" placeholder="Title">
+        <textarea id="announcementMessage" placeholder="Write announcement..."></textarea>
+
+        <button onclick="addAnnouncement()">Post Announcement</button>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Message</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody id="announcementList"></tbody>
+        </table>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

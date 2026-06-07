@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Church Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="sidebar">
+
+        <h2>Church Admin</h2>
+
+        <ul>
+            <li>Dashboard</li>
+            <li>
+                <a href="members.html">Members</a>
+            </li>
+            <li>Events</li>
+            <li>Sermons</li>
+            <li>Gallery</li>
+            <li onclick="logout()">Logout</li>
+        </ul>
+
+    </div>
+
+    <div class="main">
+
+        <h1>Dashboard</h1>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Members</h3>
+                <p id="memberCount">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Events</h3>
+                <p id="eventCount">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Sermons</h3>
+                <p id="sermonCount">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Gallery</h3>
+                <p id="galleryCount">0</p>
+            </div>
+            <div class="card">
+                <h3>Announcements</h3>
+                <p id="announcementCount">0</p>
+
+            </div>
+            <div>
+                <h2>Church Analytics</h2>
+            </div>
+            <div>
+                <h2>
+                    <h2>Church Analytics</h2>
+
+                    <canvas id="membersChart"></canvas>
+
+                    <br>
+
+                    <canvas id="eventsChart"></canvas>
+                </h2>
+            </div>
+        </div>
+
+        <script>
+            async function checkUser() {
+                const { data } = await supabaseClient.auth.getUser();
+
+                if (!data.user) {
+                    window.location.href = "login.html";
+                }
+            }
+
+            checkUser();
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+        <script src="supabase.js"></script>
+
+</body>
+
+</html>

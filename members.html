@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Members Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <h2>Church Admin</h2>
+
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="members.html">Members</a></li>
+            <li onclick="logout()">Logout</li>
+        </ul>
+    </div>
+
+    <div class="main">
+
+        <h1>Members Management</h1>
+
+        <input type="text" <br><br>
+
+        <input type="text" id="memberName" placeholder="first Name">
+        <input type="text" id="memberphone" placeholder="phonenumber">
+        <input type="email" id="memberemail" placeholder="email Address">
+        <button onclick="addmember()">
+            Add Member
+        </button>
+        <button onclick="exportMembersCSV()">Export Members (Excel)</button>
+
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="memberslist">
+            </tbody>
+        </table>
+
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase.js"></script>
+
+</body>
+
+</html>

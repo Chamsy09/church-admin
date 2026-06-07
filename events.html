@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Events Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <h2>Church Admin</h2>
+
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="members.html">Members</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li onclick="logout()">Logout</li>
+        </ul>
+    </div>
+
+    <div class="main">
+
+        <h1>Events Management</h1>
+
+        <input type="text" id="eventName" placeholder="Event Name">
+        <input type="date" id="eventDate">
+        <input type="time" id="eventTime">
+
+        <textarea id="eventDesc" placeholder="Event Description"></textarea>
+
+        <button onclick="addEvent()">Add Event</button>
+        <button onclick="exportEventsCSV()">Export Events (Excel)</button>
+
+        <br><br>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Event</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Description</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody id="eventList"></tbody>
+        </table>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Church Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <h2>Church Admin</h2>
+
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="members.html">Members</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="sermons.html">Sermons</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li onclick="logout()">Logout</li>
+        </ul>
+    </div>
+
+    <div class="main">
+
+        <h1>Gallery Management</h1>
+
+        <input type="file" id="imageInput">
+
+        <button onclick="addImage()">Upload Image</button>
+
+        <div id="galleryGrid"></div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

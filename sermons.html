@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sermons</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <h2>Church Admin</h2>
+
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="members.html">Members</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="sermons.html">Sermons</a></li>
+            <li onclick="logout()">Logout</li>
+        </ul>
+    </div>
+
+    <div class="main">
+
+        <h1>Sermons Management</h1>
+
+        <input type="text" id="sermonTitle" placeholder="Sermon Title">
+        <input type="text" id="preacher" placeholder="Preacher Name">
+        <input type="text" id="bibleVerse" placeholder="Bible Verse">
+        <input type="text" id="sermonLink" placeholder="YouTube / Audio Link">
+
+        <button onclick="addSermon()">Add Sermon</button>
+
+        <br><br>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Preacher</th>
+                    <th>Verse</th>
+                    <th>Link</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody id="sermonList"></tbody>
+        </table>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
